@@ -24,7 +24,7 @@ HEARD Deployment/
 
 #### 1. Install `processed_data.dat`, `data_ids.dat` and `predicted_data.dat` from the link given below:
 ```
-Drive Link
+https://drive.google.com/drive/folders/1gvSby3wcHPCRH-IAc4ofpMfiinuuszeK?usp=drive_link
 ```
 
 
