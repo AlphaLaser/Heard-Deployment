@@ -2,30 +2,43 @@ import streamlit as st
 import pickle
 import time
 
+metrics = {
+    "accuracy": 0.8284,
+    "R": 0.8094,
+    "P": 0.8104,
+    "F": 0.8096,
+    "ER": 0.2662,
+    "SEA": 0.8485
+
+}
+
 with st.sidebar:
     st.header("Singapore Management University")
     st.subheader("Social NLP Group")
 
-    col1, col2 = st.columns(2)
+    # col1, col2 = st.columns(2)
 
-# Button 1 in the first column
-    with col1:
-        st.button("Github")
-
-# Button 2 in the second column
-    with col2:
-        st.button("Paper")
+# # Button 1 in the first column
+#     with col1:
+#         st.button("Github")
+#
+# # Button 2 in the second column
+#     with col2:
+#         st.button("Paper")
     st.markdown("<hr>", unsafe_allow_html=True)
-    st.subheader("Authors")
-    st.info("Fengzhu Zeng")
-    st.info("Wei Gao")
-    st.markdown("<hr>", unsafe_allow_html=True)
-    st.subheader("Intern")
+    st.subheader("Interface prepared by")
     st.info("Adit Magotra")
+    st.markdown("<hr>", unsafe_allow_html=True)
+    st.subheader("Metrics")
+    st.info(f"Accuracy: {metrics['accuracy']}")
+    st.info(f"Precision: {metrics['P']}")
+    st.info(f"Recall: {metrics['R']}")
+    st.info(f"F1 Score: {metrics['F']}")
+    st.info(f"Early Rate: {metrics['ER']}")
+    st.info(f"Stablized Early Accuracy: {metrics['SEA']}")
+
 st.header("Early Rumor Detection Using Neural Hawkes Process with a New Benchmark Dataset")
 st.markdown("<br>", unsafe_allow_html=True)
-
-
 
 # data ids
 with open('Data/processed_data.dat', 'rb') as infile:
